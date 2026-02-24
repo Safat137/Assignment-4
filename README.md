@@ -1,83 +1,123 @@
-## Welcome To ( সহজ সরল সিম্পল ) Assignment - 4 
+##1️⃣ Difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll
 
+getElementById
 
----
-# 📅 Deadline For 60 marks: 23th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 50 marks: 24th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 30 marks: Any time after 24th February.
+Finds element by id.
 
+Returns only one element because id is unique.
 
-# Main Requirements
+let title = document.getElementById("title");
 
-## Design Part
+getElementsByClassName
 
-## Dashboard
-- Website name and Create a dashboard like figma 
-- The section should be responsive for mobile devices. It is totally up to you. 
+Finds elements by class.
 
-## Available Jobs Section
-- A title on the left side, jobs count on the right side 
-- 3 different tab  below the section title 
-- Minimum 8 cards with:
-	- companyName
-	- position
-	- location
-	- type
-	- salary
-	- description
-	- 2 buttons: Interview, Rejected
-- By default all the jobs data will show on All tab, and the Interview, Rejected tab will show “No jobs Available” message with a subtitle below and an icon/image on the above
+Returns HTMLCollection, which can have many elements.
 
-- The section should be responsive for mobile devices. It is totally up to you.
+let items = document.getElementsByClassName("item");
 
---- 
+querySelector
 
-## Functionalities Part
-- Clicking on Interview button on the card 
-    - will add the data on Interview tab 
-    - add the status as Interview.
-    - Will increase the the count of interview in Dashboard 
+Returns the first element that matches a CSS selector.
 
-- Clicking on Rejected button on the card 
-    - will add the data on Rejected tab 
-    - add the status as Rejected.
-    - Will increase the the count of Rejected in Dashboard
+let firstItem = document.querySelector(".item");
 
-- Enable toggle between Interview and rejected button(you can select Rejected button after clicking on Interview, and Interview button after clicking on Rejected button). It will change the tab and dashboard count also. It will show tab wise jobs count on the right.
+querySelectorAll
 
----
+Returns all elements that match CSS selector.
 
-# Challenges Requirements
-- Clicking on the delete button will remove that card from the UI, and the count will be deducted from the dashboard card and the main section.
-- No lorem ipsum text on your website. At least 8 meaningful commits in your project.  
+Returns a NodeList.
 
-- Create a readme file and answer this question on your own. Don’t copy-paste from Google or any AI chatbot. 
+let allItems = document.querySelectorAll(".item");
 
+Easy way to remember:
 
-## Answers to Questions
+id → getElementById
 
-### 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
+class → getElementsByClassName
 
-### 2. How do you create and insert a new element into the DOM?
+CSS selector → querySelector / querySelectorAll
 
-### 3. What is Event Bubbling? And how does it work?
+2️⃣ How to create and insert a new element into the DOM
 
-### 4. What is Event Delegation in JavaScript? Why is it useful?
+Steps:
 
-### 5. What is the difference between preventDefault() and stopPropagation() methods?
+Create the element
 
----
+Add text or content
 
+Insert it into the page
 
-**Technology Stack:**
-- HTML
-- CSS (Vanilla/Tailwind/DaisyUI)
-- JavaScript (Vanilla)
+Example:
 
+let newParagraph = document.createElement("p");
+newParagraph.innerText = "Hello I just created this with JavaScript!";
+document.body.appendChild(newParagraph);
+3️⃣ What is Event Bubbling?
 
---- 
+Event bubbling = event starts from the element you clicked, then moves up to its parents, then parents’ parents, and so on.
 
-## What to submit: 
+Example HTML:
 
-1. GitHub Repository Link: 
-2. Live Site Link: 
+<div>
+  <button>Click me</button>
+</div>
+
+Click button → button event runs first
+
+Then div event runs
+
+Then body
+
+Then document
+
+💡 So events bubble upward automatically.
+
+4️⃣ What is Event Delegation? Why is it useful?
+
+Event delegation = adding one event listener on parent instead of many children.
+It listens for events from children using event.target.
+
+Example:
+
+document.getElementById("list").addEventListener("click", function(e) {
+  if(e.target.tagName === "LI") {
+    console.log("List item clicked!");
+  }
+});
+
+Why useful:
+
+Less code ✅
+
+Faster performance ⚡
+
+Works for dynamically added elements 🔄
+
+5️⃣ Difference between preventDefault() and stopPropagation()
+
+preventDefault()
+
+Stops browser default behavior
+
+Example:
+
+link.addEventListener("click", function(e){
+  e.preventDefault(); // link won't open
+});
+
+stopPropagation()
+
+Stops the event from bubbling up to parent elements
+
+Example:
+
+button.addEventListener("click", function(e){
+  e.stopPropagation(); // parent won't know
+});
+
+Quick table:
+
+Method	Stops
+preventDefault	Browser default action
+stopPropagation	Event bubbling
