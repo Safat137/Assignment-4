@@ -207,7 +207,7 @@ function renderThriving() {
                 <p class="water bg-gray-200 px-5">${job.water}</p>
             </div>
 
-            <p class="status">${job.status}</p>
+           <p class="status px-3 py-1 inline-block ${job.status === 'Interview' ? 'bg-gray-300 text-black' : job.status === 'Rejected' ? 'bg-red-200 text-black' : ''} rounded">${job.status}</p>
             <p class="notes">${job.notes}</p>
 
             <div class="flex gap-5">
@@ -266,7 +266,7 @@ function renderStruggling() {
                 <p class="water bg-gray-200 px-5">${job.water}</p>
             </div>
 
-            <p class="status">${job.status}</p>
+            <p class="status px-3 py-1 inline-block ${job.status === 'Interview' ? 'bg-gray-300 text-black' : job.status === 'Rejected' ? 'bg-red-200 text-black' : ''} rounded">${job.status}</p>
             <p class="notes">${job.notes}</p>
 
             <div class="flex gap-5">
