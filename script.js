@@ -211,8 +211,8 @@ function renderThriving() {
             <p class="notes">${job.notes}</p>
 
             <div class="flex gap-5">
-                <button class="thriving-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="struggling-btn bg-red-200 px-4 py-2">Rejected</button>
+     <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
             </div>
 
         </div>
@@ -270,8 +270,8 @@ function renderStruggling() {
             <p class="notes">${job.notes}</p>
 
             <div class="flex gap-5">
-                <button class="thriving-btn bg-green-200 px-4 py-2">Interview</button>
-                <button class="struggling-btn bg-red-200 px-4 py-2">Rejected</button>
+               <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
             </div>
 
         </div>
