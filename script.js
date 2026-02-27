@@ -191,15 +191,15 @@ function renderinterviewing() {
 
         let div = document.createElement('div')
 
-        div.className = 'card flex justify-between border p-8'
+        div.className = 'card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp mb-6'
 
         div.innerHTML = `
         <div class="space-y-6">
 
             <div>
-                <p class="plantName text-4xl">${job.plantName}</p>
-                <p class="latinName">${job.position}</p>
-                <p class="latinName">${job.salary}</p>
+                <p class="plantName font-syne font-bold text-navy text-base mb-0.5">${job.plantName}</p>
+                <p class="latinName text-sm text-slate-500 mb-1.5">${job.position}</p>
+                <p class="latinName text-sm text-slate-500 mb-1.5">${job.salary}</p>
             </div>
 
             <div class="flex gap-2">
@@ -250,15 +250,15 @@ function renderrejecting() {
 
         let div = document.createElement('div')
 
-        div.className = 'card flex justify-between border p-8'
+        div.className = 'card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp mb-6'
 
         div.innerHTML = `
         <div class="space-y-6">
 
             <div>
-                <p class="plantName text-4xl">${job.plantName}</p>
-                <p class="latinName">${job.position}</p>
-                <p class="latinName">${job.salary}</p>
+                <p class="plantName font-syne font-bold text-navy text-base mb-0.5">${job.plantName}</p>
+                <p class="latinName text-sm text-slate-500 mb-1.5">${job.position}</p>
+                <p class="latinName text-sm text-slate-500 mb-1.5">${job.salary}</p>
             </div>
 
             <div class="flex gap-2">
