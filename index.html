@@ -19,12 +19,12 @@
 
             <div class="text-slate-500 mb-1 rounded-[8px] min-w-28 bg-white px-6 py-5 shadow-sm">
                 <p>Interview</p>
-                <p id="thrivingCount" class=" text-green-500 font-bold text-2xl">0</p>
+                <p id="interviewingCount" class=" text-green-500 font-bold text-2xl">0</p>
             </div>
 
             <div class="text-slate-500 mb-1 rounded-[8px] min-w-28 bg-white rounded-2xl px-6 py-5 shadow-sm">
                 <p>Rejected</p>
-                <p id="strugglingCount" class="text-red-500 font-bold text-2xl">0</p>
+                <p id="rejectingCount" class="text-red-500 font-bold text-2xl">0</p>
             </div>
         </div>
     </header>
@@ -32,17 +32,20 @@
     <hr class="my-5 w-[80%] mx-auto">
 
     <section class="max-w-5xl mx-auto">
- <div class="flex justify-between items-center mb-6">
-  <h2 class="text-2xl font-semibold">Available Jobs</h2>
-  <p id="jobCount" class="text-gray-600 font-medium">0 Jobs</p>
-</div>
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-semibold">Available Jobs</h2>
+            <p id="jobCount" class="text-gray-600 font-medium">0 Jobs</p>
+        </div>
     </section>
-   
+
     <main class="w-[80%] mx-auto">
         <div class="mb-6">
-            <button onclick="toggleStyle('all-filter-btn')"  class="bg-blue-500 text-white px-5 py-2" id="all-filter-btn">All</button>
-            <button onclick="toggleStyle('thriving-filter-btn')"  class="bg-gray-300 px-5 py-2" id="thriving-filter-btn">Interview</button>
-            <button onclick="toggleStyle('struggling-filter-btn')"  class="bg-gray-300 px-5 py-2" id="struggling-filter-btn">Rejected</button>
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-500 text-white px-5 py-2"
+                id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('interviewing-filter-btn')" class="bg-gray-300 px-5 py-2"
+                id="interviewing-filter-btn">Interview</button>
+            <button onclick="toggleStyle('rejecting-filter-btn')" class="bg-gray-300 px-5 py-2"
+                id="rejecting-filter-btn">Rejected</button>
         </div>
 
         <!-- Filtered card -->
@@ -54,7 +57,8 @@
         <section id="allCards" class="space-y-6">
 
             <!-- card 1 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -71,12 +75,15 @@
                     </div>
                     <!-- part 3 -->
                     <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <p class="notes">Build cross-platform mobile applications using React Native. Work on products used
+                        by millions of users worldwide.</p>
 
-                     <div class="flex gap-5">
-                        <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->
@@ -85,7 +92,8 @@
                 </div>
             </div>
             <!-- card 2 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -101,13 +109,16 @@
                         <p class="water bg-gray-200 px-5"></p>
                     </div>
                     <!-- part 3 -->
-                     <p class="status px-3 py-1 inline-block rounded-[4px] bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and experience with modern web design trends.</p>
+                    <p class="status px-3 py-1 inline-block rounded-[4px] bg-gray-200 text-black">NOT APPLIED</p>
+                    <p class="notes">Create stunning web experiences for high-profile clients. Must have portfolio and
+                        experience with modern web design trends.</p>
 
-                     <div class="flex gap-5">
-                        <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->
@@ -116,7 +127,8 @@
                 </div>
             </div>
             <!-- card 3 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -132,13 +144,16 @@
                         <p class="water bg-gray-200 px-5"></p>
                     </div>
                     <!-- part 3 -->
-                     <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js, React, and strong analytical thinking.</p>
+                    <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
+                    <p class="notes">Transform complex data into compelling visualizations. Required skills: D3.js,
+                        React, and strong analytical thinking.</p>
 
-                     <div class="flex gap-5">
-                        <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->
@@ -147,7 +162,8 @@
                 </div>
             </div>
             <!-- card 4 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -163,13 +179,16 @@
                         <p class="water bg-gray-200 px-5"></p>
                     </div>
                     <!-- part 3 -->
-                     <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.</p>
+                    <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
+                    <p class="notes">Design and maintain scalable backend systems using Python and AWS. Work with modern
+                        DevOps practices and cloud infrastructure.</p>
 
-                     <div class="flex gap-5">
-                        <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->
@@ -178,7 +197,8 @@
                 </div>
             </div>
             <!-- card 5 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -193,13 +213,17 @@
                         <p class="light bg-gray-200 px-5"></p>
                         <p class="water bg-gray-200 px-5"></p>
                     </div>
-                    <!-- part 3 --><p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong design skills and frontend development expertise required.</p>
+                    <!-- part 3 -->
+                    <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
+                    <p class="notes">Create beautiful and functional user interfaces for our suite of products. Strong
+                        design skills and frontend development expertise required.</p>
 
-                     <div class="flex gap-5">
-                        <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->
@@ -208,7 +232,8 @@
                 </div>
             </div>
             <!-- card 6 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -224,13 +249,16 @@
                         <p class="water bg-gray-200 px-5"></p>
                     </div>
                     <!-- part 3 -->
-                     <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer competitive compensation, health insurance, and professional development opportunities.</p>
+                    <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
+                    <p class="notes">Build enterprise applications with JavaScript and modern frameworks. We offer
+                        competitive compensation, health insurance, and professional development opportunities.</p>
 
-                     <div class="flex gap-5">
-                        <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->
@@ -239,7 +267,8 @@
                 </div>
             </div>
             <!-- card 7 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -256,12 +285,15 @@
                     </div>
                     <!-- part 3 -->
                     <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">Join our fast-growing startup and work on our core platform. Experience with Node.js and React required. Great benefits and equity package included.</p>
+                    <p class="notes">Join our fast-growing startup and work on our core platform. Experience with
+                        Node.js and React required. Great benefits and equity package included.</p>
 
-                     <div class="flex gap-5">
-                        <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->
@@ -270,7 +302,8 @@
                 </div>
             </div>
             <!-- card 8 -->
-            <div class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
+            <div
+                class="card flex justify-between border p-8 bg-white rounded-2xl border-2 border-slate-100 px-6 py-5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 animate-fadeUp">
                 <!-- main part 1 -->
                 <div class="space-y-6">
                     <!-- part 1 -->
@@ -287,12 +320,16 @@
                     </div>
                     <!-- part 3 -->
                     <p class="status px-3 py-1 inline-block rounded bg-gray-200 text-black">NOT APPLIED</p>
-                     <p class="notes">We are looking for an experienced Frontend Developer to build scalable web applications using React and TypeScript. You will work with a talented team on cutting-edge projects.</p>
+                    <p class="notes">We are looking for an experienced Frontend Developer to build scalable web
+                        applications using React and TypeScript. You will work with a talented team on cutting-edge
+                        projects.</p>
 
-                     <div class="flex gap-5">
-                       <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
-                     </div>
+                    <div class="flex gap-5">
+                        <button
+                            class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button
+                            class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+                    </div>
                 </div>
 
                 <!-- main part 2 -->

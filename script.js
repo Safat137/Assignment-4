@@ -1,15 +1,15 @@
-let thrivingList = [];
-let strugglingList = []
+let interviewingList = [];
+let rejectingList = []
 let currentStatus = 'all'
 
 let total = document.getElementById('total');
-let thrivingCount = document.getElementById('thrivingCount')
-let strugglingCount = document.getElementById('strugglingCount');
+let interviewingCount = document.getElementById('interviewingCount')
+let rejectingCount = document.getElementById('rejectingCount');
 let jobCount = document.getElementById('jobCount')
 
 const allFilterBtn = document.getElementById('all-filter-btn')
-const thrivingFilterBtn = document.getElementById('thriving-filter-btn')
-const strugglingFilterBtn = document.getElementById('struggling-filter-btn')
+const interviewingFilterBtn = document.getElementById('interviewing-filter-btn')
+const rejectingFilterBtn = document.getElementById('rejecting-filter-btn')
 
 const allCardSection = document.getElementById('allCards');
 const mainContainer = document.querySelector('main')
@@ -21,8 +21,8 @@ function calculateCount() {
     let count = allCardSection.children.length
 
     total.innerText = count
-    thrivingCount.innerText = thrivingList.length
-    strugglingCount.innerText = strugglingList.length
+    interviewingCount.innerText = interviewingList.length
+    rejectingCount.innerText = rejectingList.length
 
     jobCount.innerText = count + (count === 1 ? " Job" : " Jobs")
 }
@@ -34,12 +34,12 @@ calculateCount()
 function toggleStyle(id) {
 
     allFilterBtn.classList.add('bg-gray-300', 'text-black')
-    thrivingFilterBtn.classList.add('bg-gray-300', 'text-black')
-    strugglingFilterBtn.classList.add('bg-gray-300', 'text-black')
+    interviewingFilterBtn.classList.add('bg-gray-300', 'text-black')
+    rejectingFilterBtn.classList.add('bg-gray-300', 'text-black')
 
     allFilterBtn.classList.remove('bg-black', 'text-white')
-    thrivingFilterBtn.classList.remove('bg-black', 'text-white')
-    strugglingFilterBtn.classList.remove('bg-black', 'text-white')
+    interviewingFilterBtn.classList.remove('bg-black', 'text-white')
+    rejectingFilterBtn.classList.remove('bg-black', 'text-white')
 
     const selected = document.getElementById(id)
 
@@ -49,19 +49,19 @@ function toggleStyle(id) {
     selected.classList.add('bg-blue-500', 'text-white')
 
 
-    if (id == 'thriving-filter-btn') {
+    if (id == 'interviewing-filter-btn') {
         allCardSection.classList.add('hidden');
         filterSection.classList.remove('hidden')
-        renderThriving()
+        renderinterviewing()
 
     } else if (id == 'all-filter-btn') {
         allCardSection.classList.remove('hidden');
         filterSection.classList.add('hidden')
 
-    } else if (id == 'struggling-filter-btn') {
+    } else if (id == 'rejecting-filter-btn') {
         allCardSection.classList.add('hidden');
         filterSection.classList.remove('hidden')
-        renderStruggling()
+        renderrejecting()
     }
 }
 
@@ -69,7 +69,7 @@ function toggleStyle(id) {
 
 mainContainer.addEventListener('click', function (event) {
 
-    if (event.target.classList.contains('thriving-btn')) {
+    if (event.target.classList.contains('interviewing-btn')) {
 
         const parentNode = event.target.closest('.card')
 
@@ -92,16 +92,16 @@ mainContainer.addEventListener('click', function (event) {
             notes
         }
 
-        const exist = thrivingList.find(item => item.plantName === plantName)
+        const exist = interviewingList.find(item => item.plantName === plantName)
 
         if (!exist) {
-            thrivingList.push(cardInfo)
+            interviewingList.push(cardInfo)
         }
 
-        strugglingList = strugglingList.filter(item => item.plantName !== plantName)
+        rejectingList = rejectingList.filter(item => item.plantName !== plantName)
 
-        if (currentStatus === 'struggling-filter-btn') {
-            renderStruggling()
+        if (currentStatus === 'rejecting-filter-btn') {
+            renderrejecting()
         }
 
         calculateCount()
@@ -110,7 +110,7 @@ mainContainer.addEventListener('click', function (event) {
 
 
 
-    else if (event.target.classList.contains('struggling-btn')) {
+    else if (event.target.classList.contains('rejecting-btn')) {
 
         const parentNode = event.target.closest('.card')
 
@@ -133,16 +133,16 @@ mainContainer.addEventListener('click', function (event) {
             notes
         }
 
-        const exist = strugglingList.find(item => item.plantName === plantName)
+        const exist = rejectingList.find(item => item.plantName === plantName)
 
         if (!exist) {
-            strugglingList.push(cardInfo)
+            rejectingList.push(cardInfo)
         }
 
-        thrivingList = thrivingList.filter(item => item.plantName !== plantName)
+        interviewingList = interviewingList.filter(item => item.plantName !== plantName)
 
-        if (currentStatus === 'thriving-filter-btn') {
-            renderThriving()
+        if (currentStatus === 'interviewing-filter-btn') {
+            renderinterviewing()
         }
 
         calculateCount()
@@ -155,13 +155,13 @@ mainContainer.addEventListener('click', function (event) {
         const parentNode = event.target.closest('.card');
         const plantName = parentNode.querySelector('.plantName').innerText;
 
-        thrivingList = thrivingList.filter(item => item.plantName !== plantName);
-        strugglingList = strugglingList.filter(item => item.plantName !== plantName);
+        interviewingList = interviewingList.filter(item => item.plantName !== plantName);
+        rejectingList = rejectingList.filter(item => item.plantName !== plantName);
 
         parentNode.remove();
 
-        if(currentStatus === 'thriving-filter-btn') renderThriving();
-        else if(currentStatus === 'struggling-filter-btn') renderStruggling();
+        if (currentStatus === 'interviewing-filter-btn') renderinterviewing();
+        else if (currentStatus === 'rejecting-filter-btn') renderrejecting();
 
         calculateCount();
     }
@@ -170,11 +170,11 @@ mainContainer.addEventListener('click', function (event) {
 
 
 
-function renderThriving() {
+function renderinterviewing() {
 
     filterSection.innerHTML = ''
 
-    if (thrivingList.length === 0) {
+    if (interviewingList.length === 0) {
 
         filterSection.innerHTML = `
         <div class="text-center py-16">
@@ -187,7 +187,7 @@ function renderThriving() {
     }
 
 
-    for (let job of thrivingList) {
+    for (let job of interviewingList) {
 
         let div = document.createElement('div')
 
@@ -211,8 +211,8 @@ function renderThriving() {
             <p class="notes">${job.notes}</p>
 
             <div class="flex gap-5">
-     <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+     <button class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
             </div>
 
         </div>
@@ -229,11 +229,11 @@ function renderThriving() {
 
 
 
-function renderStruggling() {
+function renderrejecting() {
 
     filterSection.innerHTML = ''
 
-    if (strugglingList.length === 0) {
+    if (rejectingList.length === 0) {
 
         filterSection.innerHTML = `
         <div class="text-center py-16">
@@ -246,7 +246,7 @@ function renderStruggling() {
     }
 
 
-    for (let job of strugglingList) {
+    for (let job of rejectingList) {
 
         let div = document.createElement('div')
 
@@ -270,8 +270,8 @@ function renderStruggling() {
             <p class="notes">${job.notes}</p>
 
             <div class="flex gap-5">
-               <button class="thriving-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
-                        <button class="struggling-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
+               <button class="interviewing-btn font-semibold px-4 py-1.5 rounded-md border-2 text-green-500">Interview</button>
+                        <button class="rejecting-btn font-semibold px-4 py-1.5 rounded-md border-2 text-red-500">Rejected</button>
             </div>
 
         </div>
