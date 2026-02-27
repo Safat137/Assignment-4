@@ -218,7 +218,7 @@ function renderinterviewing() {
         </div>
 
         <div>
-            <button class="btn-delete"><img src="./Group 1.png"></button>
+            <button class="btn-delete w-8"><img src="./Group 1.png"></button>
         </div>
         `
 
@@ -277,7 +277,7 @@ function renderrejecting() {
         </div>
 
         <div>
-            <button class="btn-delete"><img src="./Group 1.png"></button>
+            <button class="btn-delete w-8"><img src="./Group 1.png"></button>
         </div>
         `
 
